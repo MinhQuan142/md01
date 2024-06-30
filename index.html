@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý User</title>
+
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>会員情報</h2>
+      <form id="userForm">
+        <div>
+          <label for="name" class="form-label">氏名</label>
+          <input type="text" class="form-control" id="name" />
+          <div class="error" id="nameError"></div>
+        </div>
+        <div>
+          <label class="form-label">性別</label>
+          <div>
+            <input type="radio" name="gender" value="male" /> 男
+            <input type="radio" name="gender" value="female" /> 女
+          </div>
+          <div class="error" id="genderError"></div>
+        </div>
+        <div>
+          <label for="email" class="form-label">メール</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="xxx@xxx.com"
+          />
+          <div class="error" id="emailError"></div>
+        </div>
+        <div>
+          <label for="phone" class="form-label">電話番号</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phone"
+            placeholder="123-4567-8901"
+          />
+          <div class="error" id="phoneError"></div>
+        </div>
+        <div>
+          <label for="japaneseLevel" class="form-label">日本語能力</label>
+          <select class="form-select" id="japaneseLevel">
+            <option value="N1">N1</option>
+            <option value="N2">N2</option>
+            <option value="N3">N3</option>
+            <option value="N4">N4</option>
+            <option value="N5">N5</option>
+          </select>
+          <div class="error" id="japaneseLevelError"></div>
+        </div>
+        <div>
+          <label for="score" class="form-label">点数</label>
+          <input type="number" class="form-control" id="score" />
+          <div class="error" id="scoreError"></div>
+        </div>
+        <button type="submit">登録</button>
+      </form>
+
+      <h2>会員情報一覧</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>氏名</th>
+            <th>性別</th>
+            <th>メール</th>
+            <th>電話番号</th>
+            <th>日本語能力</th>
+            <th>点数</th>
+            <th>アクション</th>
+          </tr>
+        </thead>
+        <tbody id="userList"></tbody>
+      </table>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
